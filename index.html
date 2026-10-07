@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kiran Kumar T. | Engineering Automation & CAD AI</title>
+<meta name="description" content="Engineering Automation & CAD AI Consultant — CAD automation, AI/ML, computational geometry and engineering applications.">
+<style>
+:root{
+  --bg:#f7f8fa; --surface:#ffffff; --ink:#17202a; --muted:#5d6875;
+  --line:#dfe4ea; --accent:#2457d6; --accent2:#eaf0ff;
+  --max:1120px; --radius:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+a{color:inherit}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:750;letter-spacing:-.02em}
+.navlinks{display:flex;gap:26px;font-size:14px;color:var(--muted)}
+.navlinks a{text-decoration:none}
+.hero{padding:82px 0 92px;border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:70px;align-items:center}
+.kicker{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
+h1{font-size:clamp(44px,6vw,76px);line-height:1.02;letter-spacing:-.055em;margin:18px 0 24px;max-width:850px}
+.lead{font-size:20px;color:var(--muted);max-width:720px}
+.buttons{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;border:1px solid var(--line);background:var(--surface)}
+.btn.primary{background:var(--ink);color:#fff;border-color:var(--ink)}
+.engineering-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:0 18px 45px rgba(20,35,55,.07)}
+.diagram{height:300px;position:relative;overflow:hidden;background:
+linear-gradient(var(--line) 1px,transparent 1px),
+linear-gradient(90deg,var(--line) 1px,transparent 1px);
+background-size:30px 30px;border-radius:12px}
+.diagram:before{content:"";position:absolute;width:150px;height:150px;border:2px solid var(--accent);transform:rotate(45deg);left:72px;top:62px}
+.diagram:after{content:"CAD  →  AI  →  AUTOMATION";position:absolute;left:22px;bottom:18px;font:11px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--muted);letter-spacing:.08em}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.stat{padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--bg)}
+.stat strong{display:block;font-size:22px}
+.stat span{font-size:12px;color:var(--muted)}
+section{padding:88px 0;border-bottom:1px solid var(--line)}
+.section-head{display:grid;grid-template-columns:.65fr 1.35fr;gap:50px;margin-bottom:42px}
+h2{font-size:38px;line-height:1.1;letter-spacing:-.035em;margin:0}
+.section-intro{color:var(--muted);font-size:18px;max-width:700px}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.card .num{font:12px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--accent)}
+.card h3{margin:12px 0 8px;font-size:21px}
+.card p{color:var(--muted);margin:0}
+.result{margin-top:18px;font-weight:750}
+.result span{font-weight:400;color:var(--muted);font-size:13px}
+.stack{display:flex;flex-wrap:wrap;gap:10px}
+.tag{padding:9px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:14px}
+.timeline{display:grid;gap:18px}
+.role{display:grid;grid-template-columns:180px 1fr;gap:30px;padding:22px 0;border-top:1px solid var(--line)}
+.role:first-child{border-top:0}
+.year{font:13px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--muted)}
+.role h3{margin:0 0 3px;font-size:20px}.role p{margin:0;color:var(--muted)}
+.ip{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cta{background:var(--ink);color:#fff;border-radius:24px;padding:55px}
+.cta h2{max-width:650px}.cta p{color:#c8d0da;max-width:650px;font-size:18px}
+.cta .btn{background:#fff;color:var(--ink);border-color:#fff}
+footer{padding:30px 0;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:20px}
+@media(max-width:800px){
+ .navlinks{display:none}.hero-grid,.section-head{grid-template-columns:1fr;gap:30px}
+ .cards,.ip{grid-template-columns:1fr}.stats{grid-template-columns:1fr}
+ h1{font-size:48px}.role{grid-template-columns:1fr;gap:5px}.cta{padding:35px 25px}
+}
+</style>
+</head>
+<body>
+<header class="container">
+<nav>
+  <div class="logo">Kiran Kumar T.</div>
+  <div class="navlinks">
+    <a href="#capabilities">Capabilities</a>
+    <a href="#work">Selected Work</a>
+    <a href="#background">Background</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+</header>
+
+<main>
+<section class="hero">
+<div class="container hero-grid">
+<div>
+<div class="kicker">Engineering Automation · CAD AI · ML</div>
+<h1>Engineering Automation &amp; AI for CAD.</h1>
+<p class="lead">I combine 19.5+ years of CAD and mechanical engineering experience with 7.5+ years of CAD automation and AI/ML work to turn repetitive engineering workflows into intelligent, reusable systems.</p>
+<div class="buttons">
+<a class="btn primary" href="#work">Explore selected work</a>
+<a class="btn" href="#contact">Discuss an engineering problem</a>
+</div>
+</div>
+<div class="engineering-card">
+<div class="diagram"></div>
+<div class="stats">
+<div class="stat"><strong>19.5+</strong><span>years CAD experience</span></div>
+<div class="stat"><strong>7.5+</strong><span>years automation / AI-ML</span></div>
+<div class="stat"><strong>80%</strong><span>design-cycle reduction in one project</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="capabilities">
+<div class="container">
+<div class="section-head">
+<h2>What I automate</h2>
+<p class="section-intro">The focus is not software for its own sake. It is engineering workflows where CAD, geometry, design rules, data and AI can work together.</p>
+</div>
+<div class="cards">
+<div class="card"><div class="num">01</div><h3>CAD Workflow Automation</h3><p>Automate repetitive modelling, feature creation, parameter changes, drawing operations and design workflows across CAD environments.</p></div>
+<div class="card"><div class="num">02</div><h3>Engineering Data Extraction</h3><p>Extract design parameters from CAD and convert engineering information into structured data for reuse and downstream applications.</p></div>
+<div class="card"><div class="num">03</div><h3>AI for CAD &amp; Design</h3><p>Apply deep learning and LLM techniques to component recognition, parameter optimisation, assembly prediction and intelligent design workflows.</p></div>
+<div class="card"><div class="num">04</div><h3>Engineering Geometry</h3><p>Develop algorithms around CAD solids, surfaces, features, sections and geometry-driven engineering processes.</p></div>
+<div class="card"><div class="num">05</div><h3>Engineering Applications</h3><p>Build web applications and APIs that connect engineering logic, CAD systems and structured engineering data.</p></div>
+<div class="card"><div class="num">06</div><h3>Workflow Intelligence</h3><p>Identify manual engineering decisions and repetitive operations that can be converted into repeatable computational workflows.</p></div>
+</div>
+</div>
+</section>
+
+<section id="work">
+<div class="container">
+<div class="section-head">
+<h2>Selected engineering AI &amp; automation</h2>
+<p class="section-intro">A sample of delivered work spanning LLMs, deep learning, CAD automation, computer vision and engineering applications.</p>
+</div>
+<div class="cards">
+<div class="card"><div class="num">CASE 01</div><h3>LLM-Based CAD Parameter Optimisation</h3><p>Developed and deployed an iterative prompting workflow using LLMs to optimise CAD parameters.</p><div class="result">80% accuracy · 80% design-cycle reduction</div></div>
+<div class="card"><div class="num">CASE 02</div><h3>CAD Component Classification</h3><p>Developed and deployed a PyTorch deep-learning model to classify CAD components and facilitate automated design reuse.</p><div class="result">&gt;90% classification accuracy</div></div>
+<div class="card"><div class="num">CASE 03</div><h3>CAD Assembly Position Prediction</h3><p>Developed and deployed a Keras-based deep-learning model to predict component positions in CAD assemblies and speed up design workflows.</p></div>
+<div class="card"><div class="num">CASE 04</div><h3>CAD Key Parameter Extraction</h3><p>Developed a web application to extract design parameters from CAD and populate structured data into Oracle SQL for design reuse.</p></div>
+<div class="card"><div class="num">CASE 05</div><h3>Turbocharger Housing Automation</h3><p>Built web applications using Onshape FeatureScript and the Java ecosystem to automate volute creation, entrance design and pattern generation.</p></div>
+<div class="card"><div class="num">CASE 06</div><h3>Engineering Drawing Comparison</h3><p>Developed a Python utility using PIL and OpenCV to compare different versions of engineering drawings.</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-head">
+<h2>The engineering + software intersection</h2>
+<p class="section-intro">My career has progressed from mechanical design and CAD, into CAD customisation and automation, and then into AI/ML applied to engineering workflows.</p>
+</div>
+<div class="cards">
+<div class="card"><h3>Mechanical Engineering</h3><p>Mechanical design, packaging, detailing, tolerance stack-up and turbocharger design.</p></div>
+<div class="card"><h3>CAD Automation</h3><p>CATIA macros, Onshape FeatureScript and Onshape API-based workflow automation.</p></div>
+<div class="card"><h3>AI / ML</h3><p>Deep learning, LLMs and engineering-focused machine-learning applications.</p></div>
+<div class="card"><h3>Application Development</h3><p>Python, Java ecosystem, Spring Boot, SQL, web applications and engineering APIs.</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-head">
+<h2>Tools &amp; technologies</h2>
+<p class="section-intro">A practical stack built around engineering workflows rather than a generic software-tool list.</p>
+</div>
+<div class="stack">
+<span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">Keras</span><span class="tag">LLMs</span>
+<span class="tag">CATIA</span><span class="tag">Onshape</span><span class="tag">FeatureScript</span><span class="tag">CATVBA</span>
+<span class="tag">CATScript</span><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Oracle SQL</span>
+<span class="tag">OpenCV</span><span class="tag">PIL</span><span class="tag">Git</span><span class="tag">Agile</span>
+<span class="tag">Six Sigma</span><span class="tag">TRIZ</span>
+</div>
+</div>
+</section>
+
+<section id="background">
+<div class="container">
+<div class="section-head">
+<h2>Engineering background</h2>
+<p class="section-intro">Experience across mechanical design, CAD automation and AI/ML.</p>
+</div>
+<div class="timeline">
+<div class="role"><div class="year">2018 — Present</div><div><h3>Garrett Motion · CAD Customisation Specialist</h3><p>Onshape API and FeatureScript-based CAD automation, plus AI/ML solutions for engineering design workflows.</p></div></div>
+<div class="role"><div class="year">2010 — 2018</div><div><h3>Honeywell INC · Senior Mechanical Design Engineer</h3><p>Packaging, design, detailing, tolerance stack-up, production-ready turbocharger design and CAD automation using CATVBA/CATScript.</p></div></div>
+<div class="role"><div class="year">2006 — 2010</div><div><h3>HCL Technologies · Mechanical Design Engineer</h3><p>Aero-structure design using CATIA V5, including assemblies, detailing, modifications and interference resolution.</p></div></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-head">
+<h2>Engineering innovation</h2>
+<p class="section-intro">Selected intellectual-property and algorithmic work.</p>
+</div>
+<div class="ip">
+<div class="card"><div class="num">PATENT FILED</div><h3>Casting Machine Stock Verification</h3><p>Methods and systems for casting machine stock verification.</p></div>
+<div class="card"><div class="num">TRADE SECRET</div><h3>Machined Surface Extraction</h3><p>Algorithm to extract only machined surfaces in a CAD solid.</p></div>
+<div class="card"><div class="num">TRADE SECRET</div><h3>Aligned Section Views</h3><p>Algorithm to create aligned section views in engineering drawings.</p></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<div class="cta">
+<div class="kicker" style="color:#aebfff">Engineering problem → automation opportunity</div>
+<h2>Have an engineering workflow worth automating?</h2>
+<p>If your team has a repetitive CAD process, engineering-data problem, geometry workflow or design task that depends heavily on manual effort, let's explore whether it can be automated.</p>
+<div class="buttons">
+<a class="btn" href="mailto:avkirant@gmail.com">Start a conversation</a>
+<a class="btn" href="mailto:avkirant@gmail.com?subject=Engineering%20Automation%20Discussion">Email me</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="container">
+<div>© Kiran Kumar T.</div>
+<div>Bengaluru · Engineering Automation &amp; CAD AI</div>
+</footer>
+</body>
+</html>
