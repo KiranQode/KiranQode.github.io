@@ -1,221 +1,163 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kiran Kumar T. | Engineering Automation & CAD AI</title>
-<meta name="description" content="Engineering Automation & CAD AI Consultant — CAD automation, AI/ML, computational geometry and engineering applications.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kiran Kumar T. — Engineering Automation & AI for CAD</title>
+<meta name="description" content="Engineering Automation & AI for CAD — CAD automation, engineering AI/ML, computational geometry and engineering applications.">
 <style>
 :root{
-  --bg:#f7f8fa; --surface:#ffffff; --ink:#17202a; --muted:#5d6875;
-  --line:#dfe4ea; --accent:#2457d6; --accent2:#eaf0ff;
-  --max:1120px; --radius:18px;
+  --bg:#f5f6f8;--paper:#fff;--ink:#111827;--muted:#667085;--line:#dfe3e8;
+  --accent:#2d5bff;--accent-soft:#edf2ff;--dark:#101722;--max:1180px;
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
-a{color:inherit}
-.container{width:min(var(--max),calc(100% - 40px));margin:auto}
-nav{height:76px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-weight:750;letter-spacing:-.02em}
-.navlinks{display:flex;gap:26px;font-size:14px;color:var(--muted)}
-.navlinks a{text-decoration:none}
-.hero{padding:82px 0 92px;border-bottom:1px solid var(--line)}
-.hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:70px;align-items:center}
-.kicker{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
-h1{font-size:clamp(44px,6vw,76px);line-height:1.02;letter-spacing:-.055em;margin:18px 0 24px;max-width:850px}
-.lead{font-size:20px;color:var(--muted);max-width:720px}
-.buttons{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
-.btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;border:1px solid var(--line);background:var(--surface)}
-.btn.primary{background:var(--ink);color:#fff;border-color:var(--ink)}
-.engineering-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:0 18px 45px rgba(20,35,55,.07)}
-.diagram{height:300px;position:relative;overflow:hidden;background:
-linear-gradient(var(--line) 1px,transparent 1px),
-linear-gradient(90deg,var(--line) 1px,transparent 1px);
-background-size:30px 30px;border-radius:12px}
-.diagram:before{content:"";position:absolute;width:150px;height:150px;border:2px solid var(--accent);transform:rotate(45deg);left:72px;top:62px}
-.diagram:after{content:"CAD  →  AI  →  AUTOMATION";position:absolute;left:22px;bottom:18px;font:11px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--muted);letter-spacing:.08em}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
-.stat{padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--bg)}
-.stat strong{display:block;font-size:22px}
-.stat span{font-size:12px;color:var(--muted)}
-section{padding:88px 0;border-bottom:1px solid var(--line)}
-.section-head{display:grid;grid-template-columns:.65fr 1.35fr;gap:50px;margin-bottom:42px}
-h2{font-size:38px;line-height:1.1;letter-spacing:-.035em;margin:0}
-.section-intro{color:var(--muted);font-size:18px;max-width:700px}
-.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
-.card .num{font:12px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--accent)}
-.card h3{margin:12px 0 8px;font-size:21px}
-.card p{color:var(--muted);margin:0}
-.result{margin-top:18px;font-weight:750}
-.result span{font-weight:400;color:var(--muted);font-size:13px}
-.stack{display:flex;flex-wrap:wrap;gap:10px}
-.tag{padding:9px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:14px}
-.timeline{display:grid;gap:18px}
-.role{display:grid;grid-template-columns:180px 1fr;gap:30px;padding:22px 0;border-top:1px solid var(--line)}
-.role:first-child{border-top:0}
-.year{font:13px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--muted)}
-.role h3{margin:0 0 3px;font-size:20px}.role p{margin:0;color:var(--muted)}
-.ip{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.cta{background:var(--ink);color:#fff;border-radius:24px;padding:55px}
-.cta h2{max-width:650px}.cta p{color:#c8d0da;max-width:650px;font-size:18px}
-.cta .btn{background:#fff;color:var(--ink);border-color:#fff}
-footer{padding:30px 0;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:20px}
-@media(max-width:800px){
- .navlinks{display:none}.hero-grid,.section-head{grid-template-columns:1fr;gap:30px}
- .cards,.ip{grid-template-columns:1fr}.stats{grid-template-columns:1fr}
- h1{font-size:48px}.role{grid-template-columns:1fr;gap:5px}.cta{padding:35px 25px}
-}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+a{color:inherit}.wrap{width:min(var(--max),calc(100% - 42px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(245,246,248,.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(223,227,232,.75)}
+nav{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;letter-spacing:-.03em}
+.nav{display:flex;gap:25px;color:var(--muted);font-size:13px}.nav a{text-decoration:none}
+.mono{font:11px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.1em;text-transform:uppercase}
+.hero{padding:74px 0 70px}.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:65px;align-items:center}
+.eyebrow{color:var(--accent);font-weight:800}.hero h1{font-size:clamp(48px,6.8vw,82px);line-height:.98;letter-spacing:-.065em;margin:17px 0 25px;max-width:850px}
+.hero .lead{font-size:20px;color:var(--muted);max-width:720px}.actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;border:1px solid var(--line);background:var(--paper);border-radius:10px;padding:12px 17px;font-weight:750;font-size:13px}
+.btn.dark{background:var(--dark);color:#fff;border-color:var(--dark)}
+.visual{background:var(--dark);border-radius:24px;padding:20px;box-shadow:0 25px 60px rgba(16,23,34,.14)}
+.canvas{height:360px;border:1px solid #394352;border-radius:16px;position:relative;overflow:hidden;background:
+linear-gradient(#26303c 1px,transparent 1px),linear-gradient(90deg,#26303c 1px,transparent 1px);background-size:32px 32px}
+.cube{position:absolute;left:50%;top:44%;width:150px;height:150px;border:1px solid #fff;transform:translate(-50%,-50%) rotate(30deg) skewY(-12deg);opacity:.9}
+.cube:before,.cube:after{content:"";position:absolute;border:1px solid #fff;width:100%;height:100%;left:30px;top:-30px}
+.cube:after{left:0;top:0;transform:translate(30px,-30px)}
+.node{position:absolute;padding:8px 10px;border:1px solid #6f7b8c;border-radius:7px;background:#17202c;color:#e8edf5;font:10px ui-monospace,SFMono-Regular,Menlo,monospace}
+.n1{left:18px;top:26px}.n2{right:18px;top:80px}.n3{left:24px;bottom:40px}.n4{right:25px;bottom:26px}
+.visual-label{display:flex;justify-content:space-between;color:#aeb8c6;padding:13px 2px 0}.visual-label span:last-child{color:#fff}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.metric{background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:15px}.metric b{font-size:25px;display:block;letter-spacing:-.04em}.metric small{color:var(--muted);font-size:11px}
+section{padding:86px 0;border-top:1px solid var(--line)}
+.section-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:60px}.section-title{font-size:39px;line-height:1.05;letter-spacing:-.045em;margin:0}.intro{color:var(--muted);font-size:17px;max-width:700px}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:25px}.card h3{margin:8px 0 7px;font-size:20px;letter-spacing:-.02em}.card p{margin:0;color:var(--muted)}
+.project{min-height:235px;position:relative}.project .label{color:var(--accent);font-weight:800}.outcome{position:absolute;left:25px;bottom:23px;font-weight:850}.outcome span{display:block;font-weight:500;color:var(--muted);font-size:11px}
+.pillrow{display:flex;flex-wrap:wrap;gap:9px}.pill{border:1px solid var(--line);background:var(--paper);padding:8px 12px;border-radius:999px;font-size:13px}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:35px}.flow div{background:var(--paper);border:1px solid var(--line);padding:18px 13px;border-radius:13px;font-weight:750;font-size:13px}.flow div:after{content:"→";float:right;color:var(--accent)}.flow div:last-child:after{content:""}
+.timeline{border-top:1px solid var(--line)}.row{display:grid;grid-template-columns:160px 1fr;gap:30px;padding:22px 0;border-bottom:1px solid var(--line)}.row h3{margin:0 0 3px;font-size:19px}.row p{margin:0;color:var(--muted)}
+.ip{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.cta{background:var(--dark);color:#fff;border-radius:25px;padding:55px}.cta h2{font-size:47px;line-height:1.05;letter-spacing:-.05em;max-width:730px;margin:10px 0 15px}.cta p{color:#bdc7d4;max-width:690px;font-size:18px}
+footer{padding:30px 0 38px;display:flex;justify-content:space-between;color:var(--muted);font-size:12px}
+@media(max-width:850px){.nav{display:none}.hero-grid,.section-grid{grid-template-columns:1fr;gap:35px}.cards,.ip{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.row{grid-template-columns:1fr;gap:4px}.hero{padding-top:52px}.visual .canvas{height:300px}.cta{padding:35px 25px}.cta h2{font-size:38px}}
 </style>
 </head>
 <body>
-<header class="container">
-<nav>
-  <div class="logo">Kiran Kumar T.</div>
-  <div class="navlinks">
-    <a href="#capabilities">Capabilities</a>
-    <a href="#work">Selected Work</a>
-    <a href="#background">Background</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
-</header>
+<header><div class="wrap"><nav><div class="brand">Kiran Kumar T.</div><div class="nav"><a href="#capabilities">Capabilities</a><a href="#work">Work</a><a href="#background">Background</a><a href="#contact">Contact</a></div></nav></div></header>
 
 <main>
-<section class="hero">
-<div class="container hero-grid">
+<section class="hero" style="border-top:0">
+<div class="wrap hero-grid">
 <div>
-<div class="kicker">Engineering Automation · CAD AI · ML</div>
+<div class="mono eyebrow">ENGINEERING AUTOMATION · CAD AI · ML</div>
 <h1>Engineering Automation &amp; AI for CAD.</h1>
 <p class="lead">I combine 19.5+ years of CAD and mechanical engineering experience with 7.5+ years of CAD automation and AI/ML work to turn repetitive engineering workflows into intelligent, reusable systems.</p>
-<div class="buttons">
-<a class="btn primary" href="#work">Explore selected work</a>
-<a class="btn" href="#contact">Discuss an engineering problem</a>
+<div class="actions"><a class="btn dark" href="#work">Explore selected work ↓</a><a class="btn" href="mailto:avkirant@gmail.com">Start a conversation</a></div>
 </div>
+<div>
+<div class="visual">
+<div class="canvas"><div class="cube"></div><div class="node n1">DESIGN INTENT</div><div class="node n2">AI / ML</div><div class="node n3">CAD API</div><div class="node n4">AUTOMATED OUTPUT</div></div>
+<div class="visual-label mono"><span>ENGINEERING WORKFLOW</span><span>CAD → DATA → AI</span></div>
 </div>
-<div class="engineering-card">
-<div class="diagram"></div>
-<div class="stats">
-<div class="stat"><strong>19.5+</strong><span>years CAD experience</span></div>
-<div class="stat"><strong>7.5+</strong><span>years automation / AI-ML</span></div>
-<div class="stat"><strong>80%</strong><span>design-cycle reduction in one project</span></div>
-</div>
+<div class="metrics"><div class="metric"><b>19.5+</b><small>years CAD experience</small></div><div class="metric"><b>7.5+</b><small>years automation / AI-ML</small></div><div class="metric"><b>80%</b><small>design-cycle reduction*</small></div></div>
 </div>
 </div>
 </section>
 
 <section id="capabilities">
-<div class="container">
-<div class="section-head">
-<h2>What I automate</h2>
-<p class="section-intro">The focus is not software for its own sake. It is engineering workflows where CAD, geometry, design rules, data and AI can work together.</p>
-</div>
-<div class="cards">
-<div class="card"><div class="num">01</div><h3>CAD Workflow Automation</h3><p>Automate repetitive modelling, feature creation, parameter changes, drawing operations and design workflows across CAD environments.</p></div>
-<div class="card"><div class="num">02</div><h3>Engineering Data Extraction</h3><p>Extract design parameters from CAD and convert engineering information into structured data for reuse and downstream applications.</p></div>
-<div class="card"><div class="num">03</div><h3>AI for CAD &amp; Design</h3><p>Apply deep learning and LLM techniques to component recognition, parameter optimisation, assembly prediction and intelligent design workflows.</p></div>
-<div class="card"><div class="num">04</div><h3>Engineering Geometry</h3><p>Develop algorithms around CAD solids, surfaces, features, sections and geometry-driven engineering processes.</p></div>
-<div class="card"><div class="num">05</div><h3>Engineering Applications</h3><p>Build web applications and APIs that connect engineering logic, CAD systems and structured engineering data.</p></div>
-<div class="card"><div class="num">06</div><h3>Workflow Intelligence</h3><p>Identify manual engineering decisions and repetitive operations that can be converted into repeatable computational workflows.</p></div>
-</div>
+<div class="wrap section-grid">
+<div><div class="mono eyebrow">01 · CAPABILITIES</div><h2 class="section-title">Engineering problems, approached from both sides.</h2></div>
+<div><p class="intro">Engineering automation needs more than software development. It needs an understanding of design intent, CAD geometry, engineering rules and the workflow around them.</p>
+<div class="cards" style="margin-top:30px">
+<div class="card"><div class="mono eyebrow">CAD WORKFLOWS</div><h3>CAD Workflow Automation</h3><p>Automate repetitive modelling, feature creation, parameter changes, drawing operations and design workflows.</p></div>
+<div class="card"><div class="mono eyebrow">ENGINEERING DATA</div><h3>CAD Data Extraction</h3><p>Extract engineering parameters from CAD and turn them into structured data for reuse and downstream applications.</p></div>
+<div class="card"><div class="mono eyebrow">AI FOR DESIGN</div><h3>Engineering AI / ML</h3><p>Apply deep learning and LLM techniques to component recognition, parameter optimisation, assembly prediction and intelligent design workflows.</p></div>
+<div class="card"><div class="mono eyebrow">GEOMETRY</div><h3>Computational Geometry</h3><p>Develop algorithms around CAD solids, surfaces, features, sections and geometry-driven engineering processes.</p></div>
+</div></div>
 </div>
 </section>
 
 <section id="work">
-<div class="container">
-<div class="section-head">
-<h2>Selected engineering AI &amp; automation</h2>
-<p class="section-intro">A sample of delivered work spanning LLMs, deep learning, CAD automation, computer vision and engineering applications.</p>
+<div class="wrap section-grid">
+<div><div class="mono eyebrow">02 · SELECTED WORK</div><h2 class="section-title">From automation experiments to delivered engineering applications.</h2></div>
+<div>
+<p class="intro">Selected work from CAD automation, AI/ML and engineering application development.</p>
+<div class="cards" style="margin-top:30px">
+<div class="card project"><div class="mono label">CASE 01 · LLM</div><h3>CAD Parameter Optimisation</h3><p>Iterative prompting techniques with LLMs to optimise CAD parameters.</p><div class="outcome">80% accuracy<span>80% design-cycle reduction</span></div></div>
+<div class="card project"><div class="mono label">CASE 02 · PYTORCH</div><h3>CAD Component Classification</h3><p>Deep-learning model for CAD component classification to facilitate automated design reuse.</p><div class="outcome">&gt;90% accuracy<span>Automated component classification</span></div></div>
+<div class="card project"><div class="mono label">CASE 03 · KERAS</div><h3>Assembly Position Prediction</h3><p>Deep-learning model to predict component positions in CAD assemblies and speed up design workflows.</p></div>
+<div class="card project"><div class="mono label">CASE 04 · CAD DATA</div><h3>Key Parameter Extraction</h3><p>Web application extracting design parameters from CAD and populating structured data into Oracle SQL.</p></div>
+<div class="card project"><div class="mono label">CASE 05 · ONSHAPE</div><h3>Turbocharger Housing Automation</h3><p>Automated volute creation, entrance design and pattern generation using Onshape FeatureScript and Java ecosystem.</p></div>
+<div class="card project"><div class="mono label">CASE 06 · COMPUTER VISION</div><h3>Engineering Drawing Comparison</h3><p>Python utility using PIL and OpenCV to compare different versions of engineering drawings.</p></div>
+</div></div>
 </div>
-<div class="cards">
-<div class="card"><div class="num">CASE 01</div><h3>LLM-Based CAD Parameter Optimisation</h3><p>Developed and deployed an iterative prompting workflow using LLMs to optimise CAD parameters.</p><div class="result">80% accuracy · 80% design-cycle reduction</div></div>
-<div class="card"><div class="num">CASE 02</div><h3>CAD Component Classification</h3><p>Developed and deployed a PyTorch deep-learning model to classify CAD components and facilitate automated design reuse.</p><div class="result">&gt;90% classification accuracy</div></div>
-<div class="card"><div class="num">CASE 03</div><h3>CAD Assembly Position Prediction</h3><p>Developed and deployed a Keras-based deep-learning model to predict component positions in CAD assemblies and speed up design workflows.</p></div>
-<div class="card"><div class="num">CASE 04</div><h3>CAD Key Parameter Extraction</h3><p>Developed a web application to extract design parameters from CAD and populate structured data into Oracle SQL for design reuse.</p></div>
-<div class="card"><div class="num">CASE 05</div><h3>Turbocharger Housing Automation</h3><p>Built web applications using Onshape FeatureScript and the Java ecosystem to automate volute creation, entrance design and pattern generation.</p></div>
-<div class="card"><div class="num">CASE 06</div><h3>Engineering Drawing Comparison</h3><p>Developed a Python utility using PIL and OpenCV to compare different versions of engineering drawings.</p></div>
+</section>
+
+<section>
+<div class="wrap section-grid">
+<div><div class="mono eyebrow">03 · THE DIFFERENTIATOR</div><h2 class="section-title">Engineering context first. Technology second.</h2></div>
+<div>
+<p class="intro">My career has moved from mechanical design and CAD, into CAD customisation and automation, and then into AI/ML applied to engineering workflows.</p>
+<div class="flow"><div>Engineering intent</div><div>Design rules</div><div>CAD / Geometry</div><div>Automation</div><div>AI / ML</div></div>
 </div>
 </div>
 </section>
 
 <section>
-<div class="container">
-<div class="section-head">
-<h2>The engineering + software intersection</h2>
-<p class="section-intro">My career has progressed from mechanical design and CAD, into CAD customisation and automation, and then into AI/ML applied to engineering workflows.</p>
+<div class="wrap section-grid">
+<div><div class="mono eyebrow">04 · TECHNOLOGY</div><h2 class="section-title">A practical engineering technology stack.</h2></div>
+<div>
+<div class="pillrow">
+<span class="pill">Python</span><span class="pill">PyTorch</span><span class="pill">Keras</span><span class="pill">LLMs</span><span class="pill">CATIA</span><span class="pill">Onshape</span><span class="pill">FeatureScript</span><span class="pill">CATVBA</span><span class="pill">CATScript</span><span class="pill">Java</span><span class="pill">Spring Boot</span><span class="pill">Oracle SQL</span><span class="pill">OpenCV</span><span class="pill">PIL</span><span class="pill">Git</span><span class="pill">Agile</span><span class="pill">Six Sigma</span><span class="pill">TRIZ</span>
 </div>
-<div class="cards">
-<div class="card"><h3>Mechanical Engineering</h3><p>Mechanical design, packaging, detailing, tolerance stack-up and turbocharger design.</p></div>
-<div class="card"><h3>CAD Automation</h3><p>CATIA macros, Onshape FeatureScript and Onshape API-based workflow automation.</p></div>
-<div class="card"><h3>AI / ML</h3><p>Deep learning, LLMs and engineering-focused machine-learning applications.</p></div>
-<div class="card"><h3>Application Development</h3><p>Python, Java ecosystem, Spring Boot, SQL, web applications and engineering APIs.</p></div>
-</div>
-</div>
-</section>
-
-<section>
-<div class="container">
-<div class="section-head">
-<h2>Tools &amp; technologies</h2>
-<p class="section-intro">A practical stack built around engineering workflows rather than a generic software-tool list.</p>
-</div>
-<div class="stack">
-<span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">Keras</span><span class="tag">LLMs</span>
-<span class="tag">CATIA</span><span class="tag">Onshape</span><span class="tag">FeatureScript</span><span class="tag">CATVBA</span>
-<span class="tag">CATScript</span><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Oracle SQL</span>
-<span class="tag">OpenCV</span><span class="tag">PIL</span><span class="tag">Git</span><span class="tag">Agile</span>
-<span class="tag">Six Sigma</span><span class="tag">TRIZ</span>
 </div>
 </div>
 </section>
 
 <section id="background">
-<div class="container">
-<div class="section-head">
-<h2>Engineering background</h2>
-<p class="section-intro">Experience across mechanical design, CAD automation and AI/ML.</p>
-</div>
+<div class="wrap section-grid">
+<div><div class="mono eyebrow">05 · BACKGROUND</div><h2 class="section-title">20 years across engineering, CAD and automation.</h2></div>
 <div class="timeline">
-<div class="role"><div class="year">2018 — Present</div><div><h3>Garrett Motion · CAD Customisation Specialist</h3><p>Onshape API and FeatureScript-based CAD automation, plus AI/ML solutions for engineering design workflows.</p></div></div>
-<div class="role"><div class="year">2010 — 2018</div><div><h3>Honeywell INC · Senior Mechanical Design Engineer</h3><p>Packaging, design, detailing, tolerance stack-up, production-ready turbocharger design and CAD automation using CATVBA/CATScript.</p></div></div>
-<div class="role"><div class="year">2006 — 2010</div><div><h3>HCL Technologies · Mechanical Design Engineer</h3><p>Aero-structure design using CATIA V5, including assemblies, detailing, modifications and interference resolution.</p></div></div>
+<div class="row"><div class="mono">2018 — PRESENT</div><div><h3>Garrett Motion · CAD Customisation Specialist</h3><p>Onshape API and FeatureScript-based CAD automation, plus AI/ML solutions for engineering design workflows.</p></div></div>
+<div class="row"><div class="mono">2010 — 2018</div><div><h3>Honeywell INC · Senior Mechanical Design Engineer</h3><p>Packaging, design, detailing, tolerance stack-up, production-ready turbocharger design and CAD automation using CATVBA/CATScript.</p></div></div>
+<div class="row"><div class="mono">2006 — 2010</div><div><h3>HCL Technologies · Mechanical Design Engineer</h3><p>Aero-structure design using CATIA V5, including assemblies, detailing, modifications and interference resolution.</p></div></div>
 </div>
 </div>
 </section>
 
 <section>
-<div class="container">
-<div class="section-head">
-<h2>Engineering innovation</h2>
-<p class="section-intro">Selected intellectual-property and algorithmic work.</p>
-</div>
+<div class="wrap section-grid">
+<div><div class="mono eyebrow">06 · INNOVATION</div><h2 class="section-title">Selected engineering IP.</h2></div>
 <div class="ip">
-<div class="card"><div class="num">PATENT FILED</div><h3>Casting Machine Stock Verification</h3><p>Methods and systems for casting machine stock verification.</p></div>
-<div class="card"><div class="num">TRADE SECRET</div><h3>Machined Surface Extraction</h3><p>Algorithm to extract only machined surfaces in a CAD solid.</p></div>
-<div class="card"><div class="num">TRADE SECRET</div><h3>Aligned Section Views</h3><p>Algorithm to create aligned section views in engineering drawings.</p></div>
+<div class="card"><div class="mono eyebrow">PATENT FILED</div><h3>Casting Machine Stock Verification</h3><p>Methods and systems for casting machine stock verification.</p></div>
+<div class="card"><div class="mono eyebrow">TRADE SECRET</div><h3>Machined Surface Extraction</h3><p>Algorithm to extract only machined surfaces in a CAD solid.</p></div>
+<div class="card"><div class="mono eyebrow">TRADE SECRET</div><h3>Aligned Section Views</h3><p>Algorithm to create aligned section views in engineering drawings.</p></div>
 </div>
 </div>
 </section>
 
-<section id="contact">
-<div class="container">
-<div class="cta">
-<div class="kicker" style="color:#aebfff">Engineering problem → automation opportunity</div>
+<section id="contact" style="border-bottom:0">
+<div class="wrap"><div class="cta">
+<div class="mono" style="color:#9fb3ff">ENGINEERING PROBLEM → AUTOMATION OPPORTUNITY</div>
 <h2>Have an engineering workflow worth automating?</h2>
 <p>If your team has a repetitive CAD process, engineering-data problem, geometry workflow or design task that depends heavily on manual effort, let's explore whether it can be automated.</p>
-<div class="buttons">
-<a class="btn" href="mailto:avkirant@gmail.com">Start a conversation</a>
-<a class="btn" href="mailto:avkirant@gmail.com?subject=Engineering%20Automation%20Discussion">Email me</a>
+<div class="actions">
+<a class="btn" href="mailto:avkirant@gmail.com?subject=Engineering%20Automation%20Discussion">Email Kiran →</a>
+<a class="btn" href="tel:+919945803567">Call +91 99458 03567</a>
 </div>
+<div style="margin-top:18px;color:#bdc7d4;font-size:13px">
+  <a href="mailto:avkirant@gmail.com" style="text-decoration:none">avkirant@gmail.com</a>
+  <span style="margin:0 9px">·</span>
+  <a href="tel:+919945803567" style="text-decoration:none">+91 99458 03567</a>
 </div>
-</div>
+</div></div>
 </section>
 </main>
 
-<footer class="container">
-<div>© Kiran Kumar T.</div>
-<div>Bengaluru · Engineering Automation &amp; CAD AI</div>
-</footer>
+<footer class="wrap"><div>© Kiran Kumar T.</div><div>Bengaluru · Engineering Automation &amp; CAD AI</div></footer>
 </body>
 </html>
